@@ -8,7 +8,7 @@ namespace ECommerce
         {
             using ApplicationDbContext dbContext = new ApplicationDbContext();
 
-            // Add-Migration Init  ->  Update-Database  (see Steps.txt)
+            dbContext.Database.Migrate();   // applies the Init migration and creates the database
             Console.WriteLine("ECommerce Db is ready");
         }
     }

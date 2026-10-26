@@ -8,7 +8,7 @@ namespace Library
         {
             using ApplicationDbContext dbContext = new ApplicationDbContext();
 
-            // Add-Migration Init  ->  Update-Database  (see Steps.txt)
+            dbContext.Database.Migrate();   // applies the Init migration and creates the database
             Console.WriteLine("Library Db is ready");
         }
     }

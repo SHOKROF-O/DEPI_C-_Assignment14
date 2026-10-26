@@ -17,7 +17,6 @@ Each project has an Entities folder, a Data folder (DbContext), Program.cs and a
 
 ## Run
 ```
-Add-Migration Init
-Update-Database
+dotnet run   (Program.cs runs Database.Migrate and creates the database)
 ```
-Needs the packages Microsoft.EntityFrameworkCore.SqlServer and Microsoft.EntityFrameworkCore.Tools.
+The Init migration is already in each project (Migrations folder). Needs SQL Server on `.` and the packages Microsoft.EntityFrameworkCore.SqlServer and Microsoft.EntityFrameworkCore.Tools.
